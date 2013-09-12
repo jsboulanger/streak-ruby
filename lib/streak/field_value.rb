@@ -1,5 +1,9 @@
 module Streak
   class FieldValue < StreakObject
+    def self.attributes
+      [:key, :value]
+    end
+
     def self.all(box_key)
       res = Streak.request(:get, "/boxes/#{box_key}/fields")
       convert_to_streak_object(res, FieldValue)

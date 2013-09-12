@@ -13,6 +13,10 @@ module Streak
       end
     end
 
+    def self.attributes
+      []
+    end
+
     def self.relations
       {}
     end
@@ -23,9 +27,9 @@ module Streak
 
     def initialize(values)
       @values = {}
-      values.each do |k, v|
+      (self.class.attributes + values.keys).each do |k|
         attr = Util.symbolize_attribute(k)
-        @values[attr] = StreakObject.convert_to_streak_object(v, self.class, attr)
+        @values[attr] = StreakObject.convert_to_streak_object(values[k], self.class, attr)
       end
     end
 

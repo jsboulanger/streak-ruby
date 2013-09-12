@@ -2,6 +2,13 @@ describe Streak::FieldValue do
   let!(:api) { Streak.mock_rest_client = double('RestClient') }
   let(:field_value) { test_field_value }
 
+  describe ".new" do
+    context "when the response has no value" do
+      subject { Streak::FieldValue.new(:key => "1002") }
+      its(:value) { should be_nil }
+    end
+  end
+
   describe ".all" do
     it "should call the api" do
       api.should_receive(:get).
