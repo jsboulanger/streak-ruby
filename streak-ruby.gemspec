@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'streak/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "streak"
+  spec.name          = "streak-ruby"
   spec.version       = Streak::VERSION
   spec.authors       = ["JS Boulanger"]
   spec.email         = ["jsboulanger@gmail.com"]
   spec.description   = "Ruby bindings for the Streak API."
   spec.summary       = "Ruby bindings for the Streak API."
-  spec.homepage      = "https://github.com/jsboulanger/streak"
+  spec.homepage      = "https://github.com/jsboulanger/streak-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

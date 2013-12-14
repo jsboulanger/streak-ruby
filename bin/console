@@ -2,6 +2,6 @@
 irb = RUBY_PLATFORM =~ /(:?mswin|mingw)/ ? 'irb.bat' : 'irb'
 
 libs =  " -r irb/completion"
-libs <<  " -r #{File.dirname(__FILE__) + '/../lib/streak'}"
-puts "Loading streak gem"
+libs <<  " -r #{File.dirname(__FILE__) + '/../lib/streak-ruby'}"
+puts "Loading streak-ruby gem"
 exec "#{irb} #{libs} --simple-prompt"
