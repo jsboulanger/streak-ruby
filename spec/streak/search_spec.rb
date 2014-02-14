@@ -5,7 +5,7 @@ describe Streak::Search do
   describe ".search" do
     it "should call the api" do
       api.should_receive(:get).
-        with(Streak.api_url("/search?q=box_key_1"), nil, nil).
+        with(Streak.api_url("/search?query=box_key_1"), nil, nil).
         and_return(test_response(box))
 
       Streak::Search.query("box_key_1")
