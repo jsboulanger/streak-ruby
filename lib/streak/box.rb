@@ -1,8 +1,8 @@
 module Streak
   class Box < StreakObject
-    def self.all(pipeline_key=nil)
+    def self.all(pipeline_key=nil, params={})
       path = pipeline_key ? "/pipelines/#{pipeline_key}/boxes" : "/boxes"
-      res = Streak.request(:get, path)
+      res = Streak.request(:get, path, params)
       convert_to_streak_object(res, Box)
     end
 
@@ -22,4 +22,3 @@ module Streak
     end
   end
 end
-
