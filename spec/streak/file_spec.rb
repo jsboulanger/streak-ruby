@@ -18,7 +18,7 @@ describe Streak::File do
         with(Streak.api_url("/files/box_key_1/link"), nil, nil).
         and_return(test_response(box))
 
-      Streak::File.all("box_key_1")
+      Streak::File.get_link("box_key_1")
     end
   end
 
