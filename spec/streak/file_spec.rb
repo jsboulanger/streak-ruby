@@ -12,4 +12,14 @@ describe Streak::File do
     end
   end
 
+  describe ".get_link" do
+    it "should call the api" do
+      api.should_receive(:get).
+        with(Streak.api_url("/files/box_key_1/link"), nil, nil).
+        and_return(test_response(box))
+
+      Streak::File.all("box_key_1")
+    end
+  end
+
 end
