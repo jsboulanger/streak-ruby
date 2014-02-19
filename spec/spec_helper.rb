@@ -164,4 +164,3 @@ def test_user(params={})
     "key" => "agptYWlsZm9vZ2FlciYLEgxPcmdhbml6YXRpb24iCnN0cmVhay5jb20MCxIEVXNlchgBDA"
   }.merge(params)
 end
-
