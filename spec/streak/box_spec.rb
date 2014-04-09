@@ -51,4 +51,14 @@ describe Streak::Box do
       Streak::Box.update("box_key_1", :name => "Greatest Vendor")
     end
   end
+
+  describe ".update_field" do
+    it "should call the api" do 
+      api.should_receive(:post).
+        with(Streak.api_url("/boxes/box_key_1/fields/1001"),nil,"{\"value\":\"somevalue\"}").
+        and_return(test_response(test_field_value({"key"=>"1001","value" =>"somevalue"})))
+
+      Streak::Box.update_field("box_key_1","1001","somevalue")
+    end
+  end
 end
