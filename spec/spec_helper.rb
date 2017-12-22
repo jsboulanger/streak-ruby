@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require 'streak'
+require 'rspec/its'
 
 #monkeypatch request methods
 module Streak
