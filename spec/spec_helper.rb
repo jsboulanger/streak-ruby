@@ -165,3 +165,30 @@ def test_user(params={})
     "key" => "agptYWlsZm9vZ2FlciYLEgxPcmdhbml6YXRpb24iCnN0cmVhay5jb20MCxIEVXNlchgBDA"
   }.merge(params)
 end
+
+def test_thread(params={})
+  {
+    "creatorKey": "agptYWlsZm9vZ2FlciYLEgxPcmdhbml6YXRpb24iCnN0cmVhay5jb20MCxIEVXNlchgBDA",
+    "boxKey": "agptYWlsZm9vZ2FlciYLEgxPcmdhbml6YXRpb24iCnN0cmVhay5jb20MCxIEQ2FzZRgJDA",
+    "pipelineKey": "agptYWlsZm9vZ2FlcioLEgxPcmdhbml6YXRpb24iCnN0cmVhay5jb20MCxIIV29ya2Zsb3cYBQw",
+    "creationTimestamp": 1367889076605,
+    "lastUpdatedTimestamp": 1367889076605,
+    "lastEmailTimestamp": 1367886197000,
+    "subject": "Re: Some email subject line",
+    "names": [
+      "Adam Smith",
+      "Betty Smith",
+      "Carl Jones"
+    ],
+    "emailAddresses": [
+      "asmith@example.com",
+      "bsmith@example.com",
+      "carl.jones@gmail.com"
+    ],
+    "threadGmailId": "13e7c4bcce4c3693",
+    "fileKeys": [],
+    "files": [],
+    "gmailThreadKey": "agptYWlsZm9vZ2Flci0LEgxPcmdhbml6YXRpb24iCnN0cmVhay5jb20MCxILR21haWxUaHJlYWQYKQw",
+    "key": "agptYWlsZm9vZ2Flci0LEgxPcmdhbml6YXRpb24iCnN0cmVhay5jb20MCxILR21haWxUaHJlYWQYKQw"
+  }.merge(params)
+end
