@@ -15,6 +15,7 @@ require "streak/stage"
 require "streak/user"
 require "streak/search"
 require "streak/file"
+require "streak/thread"
 
 module Streak
   @api_base = "https://www.streak.com/api/v1"
